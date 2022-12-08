@@ -110,7 +110,7 @@ alias l.="exa -a | egrep '^\.'"                                     # show only 
 alias ip="ip -color"
 
 # Replace some more things with better alternatives
-alias cat='bat --style header --style rules --style snip --style changes --style header'
+alias cat='bat --style header --style rule --style snip --style changes --style header'
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
 
 # Common use
@@ -161,13 +161,35 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 # config alias
 alias confnv="nvim ~/.config/nvim"
 alias conffi="nvim ~/.config/fish"
+alias confi3="nvim ~/.config/i3"
 
+# shutdown/reboot 
 alias shd="shutdown now"
+alias rbt="reboot"
+
+# work
+alias drf="cd ~/ssd/Drife/repos/"
+alias dex="cd ~/ssd/DexAuction/Repos/"
+alias eth="cd ~/ssd/ethIndia/"
+
+# git
+alias gis="git status"
+alias gil="git log --oneline --graph"
+alias gia="git add"
+alias gicm="git commit"
+alias gico="git checkout"
+
+# clear screen
+alias cls="clear"
 
 # dotfiles git 
 alias dot="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 
+# Blockchain
+alias blktmp="ganache-cli --networkId 1337"
+alias blk="ganache-cli --networkId 1337 --database.dbPath ~/ssd/DexAuction/ganache-db/"
+
 ## Run fastfetch if session is interactive
-if status --is-interactive && type -q fastfetch
-   fastfetch --load-config neofetch
-end
+# if status --is-interactive && type -q fastfetch
+#   fastfetch --load-config neofetch
+# end

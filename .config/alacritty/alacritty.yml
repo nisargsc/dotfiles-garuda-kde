@@ -13,7 +13,7 @@ window:
   class:
     instance: Alacritty
     general: Alacritty
-  gtk_theme_variant: dark
+  window.decorations_theme_variant: dark
 
 scrolling:
   history: 10000
